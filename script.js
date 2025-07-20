@@ -1,6 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Detekce rozlišení obrazovky a typu zařízení
   function checkDeviceCompatibility() {
+    // Pokud je zapnutý dev mode, obejdi kontrolu zařízení
+    if (window.settings && window.settings.devmode === true) {
+      console.log('🔧 Dev mode aktivní - obcházím kontrolu mobilního zařízení');
+      return true;
+    }
+    
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
     const userAgent = navigator.userAgent.toLowerCase();
