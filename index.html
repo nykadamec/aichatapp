@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Summary</title>
+<<<<<<< HEAD
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #000;
+      color: #ccc;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 320px;
+      margin: auto;
+      padding: 0 0.5rem;
+      padding-bottom: 6rem;
+      box-sizing: border-box;
+    }
+    .messages {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+    .message {
+      background-color: #111;
+      padding: 0.5rem;
+      margin-bottom: 0.4rem;
+      border-radius: 0.4rem;
+      font-size: 0.75rem;
+      color: #aaa;
+    }
+    .input-area {
+      background: #080808;
+      border-top: 1px solid #1a1a1a;
+      padding: 1rem 0.5rem 0.75rem 0.5rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #151515;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+      margin-bottom: 0.75rem;
+    }
+    .header {
+      font-size: 0.85rem;
+      margin-bottom: 0.75rem;
+      color: #bbb;
+    }
+    .file {
+      display: flex;
+      align-items: center;
+      margin: 0.3rem 0;
+      font-size: 0.8rem;
+    }
+    .file-icon {
+      margin-right: 0.4rem;
+    }
+    .status {
+      margin-left: auto;
+      color: #666;
+      font-size: 0.75rem;
+    }
+    .actions {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+    }
+    .btn {
+      flex: 1;
+      padding: 0.3rem;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.75rem;
+    }
+    .btn-keep {
+      background-color: #2e7d32;
+      color: white;
+    }
+    .btn-undo {
+      background-color: #b00020;
+      color: white;
+    }
+    .add-context {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #333;
+      border-radius: 0.4rem;
+      padding: 0.4rem;
+      color: #888;
+      font-size: 0.75rem;
+      margin-top: 0.6rem;
+    }
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      background: #0a0a0a;
+      border: 1px solid #1a1a1a;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      margin-top: 0.6rem;
+    }
+    .input-wrapper input {
+      flex-grow: 1;
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 0.85rem;
+      outline: none;
+    }
+    .input-wrapper button {
+      background: none;
+      border: none;
+      color: #8ab4f8;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .agent-selector {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 0.7rem;
+      color: #666;
+      margin-top: 0.4rem;
+      gap: 0.6rem;
+      padding-left: 6px;
+    }
+    .agent-selector span:first-child {
+      margin-right: 2px;
+      padding-right: 2px;
+    }
+    .pipe-separator {
+      margin: 0 0.25rem;
+      color: #444;
+    }
+  </style>
+=======
+  <link rel="stylesheet" href="styles.css">
+>>>>>>> ea7482f (feat: add initial mobile-optimized change summary interface)
+</head>
+<body>
+  <div class="container">
+    <div class="messages">
+      <div class="message">Hi, here are the files that changed:</div>
+      <div class="message">Do you want to keep or undo?</div>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <div class="card">
+      <div class="header">4 files changed</div>
+      <div class="file"><span class="file-icon">🟦</span> race-service.ts <span class="status">src/lib/data</span></div>
+      <div class="file"><span class="file-icon">🟪</span> race-service.test.ts <span class="status">src/lib/data</span></div>
+      <div class="file"><span class="file-icon">🟢</span> page.server.ts <span class="status">src/routes</span></div>
+      <div class="file"><span class="file-icon">🟠</span> page.svelte <span class="status">src/routes</span></div>
+
+      <div class="actions">
+        <button class="btn btn-keep">Keep</button>
+        <button class="btn btn-undo">Undo</button>
+      </div>
+
+      <div class="add-context">＋ Add Context…</div>
+    </div>
+
+    <div class="input-wrapper">
+      <input type="text" placeholder="Type a message…">
+      <button>➤</button>
+    </div>
+    <div class="agent-selector">
+      <span>Agent ▼</span>
+      <span class="pipe-separator">|</span>
+      <span>Claude 3.7 Sonnet ▼</span>
+    </div>
+  </div>
+<<<<<<< HEAD
+</body>
+</html>
+=======
+<script src="script.js"></script>
+</body>
+</html>
+>>>>>>> ea7482f (feat: add initial mobile-optimized change summary interface)
