@@ -100,4 +100,93 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+  
+  // Dropdown functionality
+  const handleDropdownToggle = (event) => {
+    event.stopPropagation();
+    const dropdown = event.currentTarget.closest('.dropdown');
+    const isOpen = dropdown.classList.contains('open');
+    
+    console.log('Toggle clicked, dropdown:', dropdown, 'isOpen:', isOpen);
+    
+    // Close all dropdowns first
+    document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+    
+    // Toggle current dropdown
+    if (!isOpen) {
+      dropdown.classList.add('open');
+      console.log('Opened dropdown');
+    }
+  };
+
+  const handleDropdownItemClick = (event) => {
+    event.stopPropagation();
+    const item = event.target;
+    const dropdown = item.closest('.dropdown');
+    const trigger = dropdown.querySelector('.dropdown-label');
+    
+    console.log('Item clicked:', item.textContent);
+    
+    // Update label
+    trigger.textContent = item.textContent;
+    
+    // Close dropdown
+    dropdown.classList.remove('open');
+    
+    console.log('Selected:', item.dataset.value, item.textContent);
+  };
+
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.dropdown')) {
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleDropdownToggle(event);
+    } else if (event.key === 'Escape') {
+      document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+    }
+  };
+
+  // Initialize dropdowns
+  const initializeDropdowns = () => {
+    console.log('Initializing dropdowns...');
+    
+    // Add event listeners to dropdown triggers
+    const triggers = document.querySelectorAll('.dropdown-trigger');
+    console.log('Found triggers:', triggers.length);
+    
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', handleDropdownToggle);
+      console.log('Added click listener to trigger');
+    });
+
+    // Add event listeners to dropdown items
+    const items = document.querySelectorAll('.dropdown-item');
+    console.log('Found items:', items.length);
+    
+    items.forEach(item => {
+      item.addEventListener('click', handleDropdownItemClick);
+    });
+
+    // Add keyboard support
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      dropdown.addEventListener('keydown', handleKeyDown);
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', handleClickOutside);
+    
+    console.log('Dropdowns initialized');
+  };
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeDropdowns);
+  } else {
+    initializeDropdowns();
+  }
 });

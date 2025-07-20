@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Summary</title>
+  <link rel="stylesheet" href="../src/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="messages">
+      <div class="message">Hi, here are the files that changed:</div>
+      <div class="message">Do you want to keep or undo?</div>
+    </div>
+  </div>
+
+  <div class="input-area">
+    <div class="card">
+      <div class="header">4 files changed</div>
+      <div class="file"><span class="file-icon">🟦</span> race-service.ts <span class="status">src/lib/data</span></div>
+      <div class="file"><span class="file-icon">🟪</span> race-service.test.ts <span class="status">src/lib/data</span></div>
+      <div class="file"><span class="file-icon">🟢</span> page.server.ts <span class="status">src/routes</span></div>
+      <div class="file"><span class="file-icon">🟠</span> page.svelte <span class="status">src/routes</span></div>
+
+      <div class="actions">
+        <button class="btn btn-keep">Keep</button>
+        <button class="btn btn-undo">Undo</button>
+      </div>
+
+      <div class="add-context">＋ Add Context…</div>
+    </div>
+
+    <div class="input-wrapper">
+      <input type="text" placeholder="Type a message…">
+      <button>➤</button>
+    </div>
+    <div class="agent-selector">
+      <div class="dropdown" tabindex="0" aria-label="Select agent">
+        <div class="dropdown-trigger">
+          <span class="dropdown-label">Agent</span>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" data-value="copilot">Agent</div>
+          <div class="dropdown-item" data-value="claude">Ask</div>
+        </div>
+      </div>
+      <span class="pipe-separator">|</span>
+      <div class="dropdown" tabindex="0" aria-label="Select model">
+        <div class="dropdown-trigger">
+          <span class="dropdown-label">Claude 3.7 Sonnet</span>
+          <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="dropdown-menu">
+          <div class="dropdown-item" data-value="claude-sonnet">Claude 3.7 Sonnet</div>
+          <div class="dropdown-item" data-value="claude-haiku">Claude 3.7 Haiku</div>
+          <div class="dropdown-item" data-value="gpt4">GPT-4 Turbo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="../src/config/config.js"></script>
+<script src="../src/js/script.js"></script>
+</body>
+</html>

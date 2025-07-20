@@ -1,0 +1,50 @@
+{
+  "name": "ai-chat-app",
+  "version": "1.0.0",
+  "description": "Mobilní webová aplikace pro interaktivní komunikaci s AI asistenty",
+  "main": "dev-server.js",
+  "scripts": {
+    "start": "node dev-server.js",
+    "dev": "node dev-server.js",
+    "serve": "npx serve public",
+    "python": "python -m http.server 8000",
+    "python3": "python3 -m http.server 8000",
+    "open": "open http://localhost:3000",
+    "open-chrome": "open -a 'Google Chrome' http://localhost:3000",
+    "open-firefox": "open -a 'Firefox' http://localhost:3000",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "echo \"No linter configured\" && exit 0",
+    "build": "echo \"No build process needed for vanilla JS\" && exit 0"
+  },
+  "keywords": [
+    "ai",
+    "chat",
+    "mobile",
+    "vanilla-js",
+    "web-app",
+    "development"
+  ],
+  "author": "AI Chat App Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/ai-chat-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/ai-chat-app/issues"
+  },
+  "homepage": "https://github.com/your-username/ai-chat-app#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "optionalDependencies": {},
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 
