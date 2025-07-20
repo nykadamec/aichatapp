@@ -1,7 +1,7 @@
 // Konfigurace aplikace
 const settings = {
   devmode: true,
-  mobileOnlyMode: true,
+  mobileOnlyMode: false,
   // Další nastavení lze přidat podle potřeby
   debugMode: false,
   apiUrl: 'https://api.example.com',
