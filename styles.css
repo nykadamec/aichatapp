@@ -7,9 +7,9 @@ body {
     }
     .container {
       max-width: 320px;
-      margin: auto;
-      padding: 0 0.5rem;
-      padding-bottom: 6rem;
+      margin: 0 auto;
+      padding: 1rem;
+      padding-bottom: 12rem;
       box-sizing: border-box;
     }
     .messages {
@@ -34,7 +34,7 @@ body {
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      max-width: 94%;
+      max-width: 320px;
       box-sizing: border-box;
     }
     .card {
